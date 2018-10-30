@@ -1,0 +1,45 @@
+PC1:
+192.168.4.1
+
+PC2:
+192.168.5.1
+
+Router 1:
+192.168.4.254
+
+Router 2:
+192.168.5.254
+
+Add a WCT1 pin to both of the routers(first close the virtual switch below)
+
+Serial Port
+
+Router 1: 
+192.168.100.1
+Subnet: 255.255.255.252
+
+Router 2:
+192.168.100.2
+Subnet: 255.255.255.252
+
+Router 1 RIP
+Add 192.168.4.0,192.168.5.0,192.168.100.0
+
+Router 2 RIP
+Add 192.168.4.0,192.168.5.0,192.168.100.0
+
+PC1 settings
+Gateway: 192.168.4.254
+DNS: 0.0.0.0
+
+PC2 settings
+Gateway: 192.168.5.254
+DNS: 0.0.0.0
+
+Open PC1-Desktop-Command Prompt
+ping 192.168.5.1
+(some packets maybe lost on first time)
+
+Click on msg icon and click on both PC's
+
+Click on stop watch and press Action/play
